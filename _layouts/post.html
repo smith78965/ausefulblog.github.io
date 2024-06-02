@@ -1,0 +1,36 @@
+---
+layout: default
+css: ['sidebar-post-nav.css']
+---
+{% include jumbotron.html %}
+<article class="post container" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="row">
+
+        {% if page.no-post-nav %}
+        <div class="col-md-12 markdown-body">
+
+            {{ content }}
+
+        </div>
+</br>{% include post-tag.html %}</br>
+    <p align="center" style="margin-top: 15px; font-size: 11px;color: #cc0000;">
+        <strong>（转载本站文章请注明作者和出处： <a href="https://www.ausefulblog.com">john博客</a>）</strong>
+    </p>
+	    
+        {% else %}
+        <div class="col-md-8 markdown-body">
+
+            {{ content }}
+
+        </div>
+</br>{% include post-tag.html %}</br>
+---
+        <div class="col-md-4">
+            {% include sidebar-post-nav.html %}
+        </div>
+        {% endif %}
+
+    </div>
+
+</article>
