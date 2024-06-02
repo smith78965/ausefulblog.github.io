@@ -1,0 +1,61 @@
+---
+layout: default
+menu: home
+css: ['index.css', 'sidebar-popular-repo.css']
+---
+<section class="jumbotron">
+    <div class="container">
+        <h1>{{ site.title }}</h1>
+        <div id="jumbotron-meta-info">
+            <span class="meta-info">
+                <span class="octicon octicon-location"></span>
+                {{ site.location }}
+            </span>
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-organization"></span>
+                <a href="https://verge.v2ray-clash.top/go/gfg89976" target="_blank">超性价比👉高端稳定机场</a>
+            </span>
+            <span class="meta-info hvr-grow">
+                <span class="octicon octicon-organization"></span>
+                <a href="https://verge.v2ray-clash.top/go/sd897fg9" target="_blank">好用便宜机场</a>
+            </span>
+        </div>
+    </div>
+</section>
+<section class="content container">
+
+    <div class="row">
+
+        <!-- Post List -->
+        <div class="col-md-8">
+
+            <ol class="post-list">
+                {% for post in paginator.posts %}
+                <li class="post-list-item">
+                    <h2 class="post-list-title">
+                        <a class="hvr-underline-from-center" href="{{ site.url }}{{ post.url }}"  target="_blank">{{ post.title }}</a>
+                    </h2>
+                    <p class="post-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="post-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
+
+            <!-- Pagination -->
+            {% include pagination.html %}
+
+
+        </div>
+
+        <div class="col-md-4">
+            {% include sidebar-popular-repo.html %}
+        </div>
+
+    </div>
+
+</section>
+

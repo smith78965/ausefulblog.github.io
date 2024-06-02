@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /*.ico$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.bmp$
+Disallow: /bower_components/
+Disallow: .idea/
+Disallow: /static/
+Disallow: /_includes/
+Disallow: /assets/
+Disallow: /login
+Disallow: /_layouts/
+Disallow: /logreport/
+
+Sitemap: https://www.ausefulblog.com/sitemap.xml
