@@ -8,6 +8,7 @@
 .card-image .card-image-cell {
     display: table-cell;
     vertical-align: middle;
+    background: #f1f4f7;
 }
 
 .card-image h3 {
